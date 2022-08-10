@@ -37,7 +37,7 @@ public class mySuperMarket {
 		shelf.put(type, shelf.getOrDefault(type, 0) + quantity);
 		
 		
-		System.out.println("Product added...");
+//		System.out.println("Product added...");
 	}
 	
 	
@@ -48,7 +48,7 @@ public class mySuperMarket {
 	
 	
 	public void inputValue(Scanner sc, BufferedReader br) throws Exception {
-		System.out.print("Enter Product id : ");
+		System.out.print("\nEnter Product id : ");
 		int id = sc.nextInt();
 		System.out.println("Enter Product name : ");
 		String name = br.readLine();
@@ -62,6 +62,7 @@ public class mySuperMarket {
 		String type = br.readLine();
 		
 		addProduct(id, name, price, quantity, description, type);
+		System.out.println();
 		
 	}
 
@@ -179,7 +180,7 @@ public class mySuperMarket {
 			System.out.println("Enter 4 for find Product by id : ");
 //			System.out.println("Enter 5 for find shelf location : ");
 			System.out.println("Enter 'exit' to stop aplication : ");
-			
+			System.out.println("Enter your choice : ");
 			String ch = br.readLine();
 			
 			switch(ch) {
@@ -211,6 +212,7 @@ public class mySuperMarket {
 //					break;
 				case "exit":
 					System.out.println("Thank You for Using ( Product Created by 'Khatroke khiladi Group' )");
+					System.exit(0);
 					break;
 				default:
 					System.out.println("Sorry Wrong input");
