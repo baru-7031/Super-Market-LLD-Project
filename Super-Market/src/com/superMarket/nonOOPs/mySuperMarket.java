@@ -48,8 +48,19 @@ public class mySuperMarket {
 	
 	
 	public void inputValue(Scanner sc, BufferedReader br) throws Exception {
-		System.out.print("\nEnter Product id : ");
-		int id = sc.nextInt();
+		int id=0;
+		while(true) {
+			System.out.print("\nEnter Product id : ");
+			id = sc.nextInt();
+			
+			if(validID(id)) {
+				break;
+			}
+			else {
+				System.out.println("Id already excited\n");
+			}
+		}
+		
 		System.out.println("Enter Product name : ");
 		String name = br.readLine();
 		System.out.println("Enter Product Price : ");
@@ -65,10 +76,29 @@ public class mySuperMarket {
 		System.out.println();
 		
 	}
-
 	
 	
 //###################-----------XXX------------- INPUT PRODUCT DETAILS METHOD ---------------XXX------------############################
+	
+	
+//###################------------------------ CHECK VALID ID OR NOT METHOD ---------------------------############################
+	public boolean validID(int id) {
+		
+		for(int i =0; i<stocks.size(); i++) {
+			product temp = stocks.get(i);
+			int checkId = temp.getProductId();
+			
+			if(checkId == id) {
+				return false;
+			}
+			
+		}
+		
+		return true;
+	}
+	
+	
+//###################-------------XXX----------- CHECK VALID ID OR NOT METHOD --------------XXX-------------############################
 	
 	
 	
