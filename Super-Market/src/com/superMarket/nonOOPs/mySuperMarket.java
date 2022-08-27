@@ -210,7 +210,7 @@ public class mySuperMarket {
 			System.out.println("Enter 4 for find Product by id : ");
 //			System.out.println("Enter 5 for find shelf location : ");
 			System.out.println("Enter 'exit' to stop aplication : ");
-			System.out.println("Enter your choice : ");
+			System.out.print("Enter your choice : ");
 			String ch = br.readLine();
 			
 			switch(ch) {
@@ -241,7 +241,7 @@ public class mySuperMarket {
 //					
 //					break;
 				case "exit":
-					System.out.println("Thank You for Using ( Product Created by 'Khatroke khiladi Group' )");
+					System.out.println("Thank You for Using ( Product Created by 'Subham Kr Gupta' )");
 					System.exit(0);
 					break;
 				default:
